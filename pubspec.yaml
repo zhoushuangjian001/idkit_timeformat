@@ -1,6 +1,6 @@
 name: idkit_timeformat
 description: This is a toolkit for time formatting, which can output time strings in common formats and custom formats.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/zhoushuangjian001/idkit_timeformat
 
 environment:

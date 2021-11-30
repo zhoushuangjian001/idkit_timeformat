@@ -1,45 +1,14 @@
-# idkit_timeformat
+import 'package:idkit_timeformat/idkit_timeformat.dart';
 
-### Introduce
-
-This is a toolkit for time formatting, which can output time strings in common formats and custom formats.
-
-### Function method
-
-##### 1. Obtain the time output in a defined format through a timestamp in the form of a string.
-
-```dart
-formString(String time, {String format,TimeUnit timeUnit}) -> String
-```
-
-##### 2. Get the output string in the specified format at the current time.
-
-```dart
-fromNow({String format}) -> String
-```
-
-##### 3. Get the string output in the specified format through the digital timestamp.
-
-```dart
-formInt(String time, {String format,TimeUnit timeUnit}) -> String
-```
-
-### Unit of time
-
-```dart
-/// Time unit.
-enum TimeUnit {
-  microsecond,
-  millisecond,
-  second,
+void main() {
+  toStringTimeStamp();
+  currentTimestamp();
+  timestamp();
 }
-```
 
-## Instance
+const String time = '1638263520000';
+const int timeValue = 1638263520000;
 
-##### 1. String timestamp
-
-```dart
 /// 1. String timestamp
 void toStringTimeStamp() {
   final String time1 = IDKitTimeFormat.fromInt(timeValue);
@@ -63,11 +32,7 @@ void toStringTimeStamp() {
   final String time6 = IDKitTimeFormat.fromInt(timeValue, format: 'MM');
   print(time6); // 11
 }
-```
 
-##### 2. Current timestamp
-
-```dart
 /// 2. Current timestamp
 void currentTimestamp() {
   final String time1 = IDKitTimeFormat.fromNow();
@@ -90,11 +55,7 @@ void currentTimestamp() {
   final String time6 = IDKitTimeFormat.fromNow(format: 'MM');
   print(time6); // 11
 }
-```
 
-##### 3. Timestamp
-
-```dart
 /// 3. Timestamp
 void timestamp() {
   final String time1 = IDKitTimeFormat.fromInt(timeValue);
@@ -118,4 +79,3 @@ void timestamp() {
   final String time6 = IDKitTimeFormat.fromInt(timeValue, format: 'MM');
   print(time6); // 11
 }
-```
